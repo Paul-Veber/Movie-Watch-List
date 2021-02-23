@@ -4,7 +4,7 @@ export interface Movie {
     durationMinute: number
     realisator: string
     type: string
-    release: Date
+    release: string
 }
 
 export interface series extends Movie {

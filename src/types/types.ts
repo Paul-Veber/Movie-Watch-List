@@ -1,4 +1,5 @@
 export interface Movie {
+    key: number
     name: string
     durationHour : number
     durationMinute: number
@@ -12,4 +13,7 @@ export interface series extends Movie {
 
 }
 
-export type Watchlist = Array<Movie>
+export interface WatchlistProp extends Movie {
+    removeMovie: Function
+    viewedMovie: Function
+}

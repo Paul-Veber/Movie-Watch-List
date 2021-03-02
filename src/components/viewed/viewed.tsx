@@ -1,10 +1,10 @@
 import { FunctionComponent } from "react"
 
 
-export const viewedElement: FunctionComponent = ( props:any ) =>
+export const ViewedElement: FunctionComponent = ( props:any ) =>
   {
   return (
-    <div className="list" id={props.key} >
+    <div className="list" key={props.key} id={props.key} >
       <input type="text" value={props.name} disabled/>
       <input type="text" value={props.realisator} disabled/>
       <input type="text" value={props.type} disabled/>

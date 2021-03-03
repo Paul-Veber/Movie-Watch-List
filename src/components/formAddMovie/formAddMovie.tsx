@@ -88,6 +88,11 @@ export const FormAddMovie: FunctionComponent<FormAddMovieProps> = ({
       />
 
       <div className="form__duration">
+        <NumberInput
+          title="Durée"
+          tag="durationHour"
+          onChange={updateMovie}
+        />
         <label htmlFor="hourDuration" className="form__label">
           Durée
           <input
@@ -96,8 +101,8 @@ export const FormAddMovie: FunctionComponent<FormAddMovieProps> = ({
             id="hourDuration"
             className="form__input"
             onChange={(e) =>
-              props.setMovie({
-                ...props.movie,
+              setMovie({
+                ...movie,
                 durationHour: Number(e.target.value),
               })
             }
@@ -109,8 +114,8 @@ export const FormAddMovie: FunctionComponent<FormAddMovieProps> = ({
             id="minuteDuration"
             className="form__label"
             onChange={(e) =>
-              props.setMovie({
-                ...props.movie,
+              setMovie({
+                ...movie,
                 durationMinute: Number(e.target.value),
               })
             }
@@ -125,7 +130,7 @@ export const FormAddMovie: FunctionComponent<FormAddMovieProps> = ({
           id="release"
           className="form__input"
           onChange={(e) =>
-            props.setMovie({ ...props.movie, release: e.target.value })
+            setMovie({ ...movie, release: e.target.value })
           }
         />
       </label>
